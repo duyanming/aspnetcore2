@@ -6,3 +6,12 @@ D:\Project\git\dym\dym.web\bin\Debug\netcoreapp1.1\dym.web.pdb
 D:\Project\git\dym\dym.web\obj\Debug\netcoreapp1.1\dym.web.AssemblyInfo.cs
 D:\Project\git\dym\dym.web\obj\Debug\netcoreapp1.1\dym.web.dll
 D:\Project\git\dym\dym.web\obj\Debug\netcoreapp1.1\dym.web.pdb
+D:\Project\git\dotnet\dym.web\bin\Debug\netcoreapp1.1\dym.web.deps.json
+D:\Project\git\dotnet\dym.web\bin\Debug\netcoreapp1.1\dym.web.runtimeconfig.json
+D:\Project\git\dotnet\dym.web\bin\Debug\netcoreapp1.1\dym.web.runtimeconfig.dev.json
+D:\Project\git\dotnet\dym.web\bin\Debug\netcoreapp1.1\dym.web.dll
+D:\Project\git\dotnet\dym.web\bin\Debug\netcoreapp1.1\dym.web.pdb
+D:\Project\git\dotnet\dym.web\obj\Debug\netcoreapp1.1\dym.web.csprojResolveAssemblyReference.cache
+D:\Project\git\dotnet\dym.web\obj\Debug\netcoreapp1.1\dym.web.AssemblyInfo.cs
+D:\Project\git\dotnet\dym.web\obj\Debug\netcoreapp1.1\dym.web.dll
+D:\Project\git\dotnet\dym.web\obj\Debug\netcoreapp1.1\dym.web.pdb

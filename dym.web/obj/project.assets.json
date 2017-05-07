@@ -10377,10 +10377,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\git\\dym\\dym.web\\dym.web.csproj",
+      "projectUniqueName": "D:\\Project\\git\\dotnet\\dym.web\\dym.web.csproj",
       "projectName": "dym.web",
-      "projectPath": "D:\\Project\\git\\dym\\dym.web\\dym.web.csproj",
-      "outputPath": "D:\\Project\\git\\dym\\dym.web\\obj\\",
+      "projectPath": "D:\\Project\\git\\dotnet\\dym.web\\dym.web.csproj",
+      "outputPath": "D:\\Project\\git\\dotnet\\dym.web\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
