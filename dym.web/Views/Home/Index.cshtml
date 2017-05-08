@@ -2,8 +2,13 @@
     ViewData["Title"] = "Index Page";
 }
 <h1>这是测试用的Index页面</h1>
-<script>
-    $(function() {
-        $("h1").html("123");
+<script src="~/js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var timeout = setTimeout(
+            function () { 
+                $("h1").html("Hello Welcome to .net core!");
+            },2000
+        );
     });
 </script>
