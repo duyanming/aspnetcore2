@@ -14,6 +14,6 @@ namespace @Model.NameSpace
 		@:/// </summary>
 		@:public @item.TypeName @item.ColumnName { get; set; }
 }
-		 public string table=@Model.ClassName;
+		 public string table="@Model.ClassName";
 	}
 }
