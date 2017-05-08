@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Const", "Common\dym.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Context", "Common\dym.Context\dym.Context.csproj", "{77273470-2262-4DFE-991F-2AA86814DB2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Logic", "Component\dym.Logic\dym.Logic.csproj", "{CA4F5444-3654-4621-86F7-081D29156B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{77273470-2262-4DFE-991F-2AA86814DB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77273470-2262-4DFE-991F-2AA86814DB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77273470-2262-4DFE-991F-2AA86814DB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4F5444-3654-4621-86F7-081D29156B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4F5444-3654-4621-86F7-081D29156B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA4F5444-3654-4621-86F7-081D29156B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4F5444-3654-4621-86F7-081D29156B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +54,6 @@ Global
 		{8704E99C-D7AC-49F1-B2EE-4118A4A61DA6} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
 		{C5D08519-D1F3-4F20-AB93-16B4DAE9841A} = {4E104471-911A-4410-8B95-DDBB673C3EA3}
 		{77273470-2262-4DFE-991F-2AA86814DB2B} = {4E104471-911A-4410-8B95-DDBB673C3EA3}
+		{CA4F5444-3654-4621-86F7-081D29156B7E} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
 	EndGlobalSection
 EndGlobal
