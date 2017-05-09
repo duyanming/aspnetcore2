@@ -1,21 +1,32 @@
-﻿@using dym.Model
+﻿@using dym.Model;
 @{
     ViewData["Title"] = "会员列表";
 }
-<h1>会员列表</h1>
-<ul>
-    @foreach (sys_member m in Model)
-    {
-        <li>@m.name</li>
-    }
-</ul>
 <script src="~/js/jquery-3.1.0.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var timeout = setTimeout(
-            function () { 
-                $("h1").html("Hello Welcome to .net core!");
-            },2000
-        );
-    });
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+    <h2 style="text-align:center;">会员列表</h2>
+    <p> .net core 测试页面</p>
+    <table class="table  table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>职务</th>
+                <th>注册日期</th>
+            </tr>
+        </thead>
+        <tbody>
+           @foreach(sys_member m in Model){ 
+            <tr>
+                <td>@m.account</td>
+                <td>@m.name</td>
+                <td>@m.position</td>
+                <td>@m.rdt</td>
+            </tr>
+           }
+        </tbody>
+    </table>
+</div>
