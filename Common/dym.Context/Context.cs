@@ -6,6 +6,6 @@ namespace dym.Context
 {
     public class Context
     {
-        public static MySqlConnection db = new MySqlConnection(Const.AppSettings.ConnStr);
+        public  MySqlConnection db = new MySqlConnection(Const.AppSettings.ConnStr);
     }
 }
