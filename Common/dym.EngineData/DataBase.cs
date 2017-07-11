@@ -2,9 +2,9 @@
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace dym.Context
+namespace dym.EngineData
 {
-    public class Context
+    public class DataBase
     {
         public  MySqlConnection db = new MySqlConnection(Const.AppSettings.ConnStr);
     }

@@ -26,7 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\dym.Const\dym.Const.csproj" />
-    <ProjectReference Include="..\..\Common\dym.Context\dym.Context.csproj" />
+    <ProjectReference Include="..\..\Common\dym.EngineData\dym.EngineData.csproj" />
     <ProjectReference Include="..\..\Component\dym.Logic\dym.Logic.csproj" />
     <ProjectReference Include="..\..\Component\dym.Model\dym.Model.csproj" />
   </ItemGroup>

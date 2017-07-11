@@ -5,7 +5,7 @@ using dym.Model;
 
 namespace dym.Logic
 {
-    public class Platform : Context.Context
+    public class Platform :EngineData.DataBase
     {
         public Platform()
         {
