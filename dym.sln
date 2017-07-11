@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.Web", "Server\dym.Web\d
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.EngineData", "Common\dym.EngineData\dym.EngineData.csproj", "{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.Dc", "Server\dym.Dc\dym.Dc.csproj", "{4839E5F8-4215-4958-91E5-F3761EA233C4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4839E5F8-4215-4958-91E5-F3761EA233C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4839E5F8-4215-4958-91E5-F3761EA233C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4839E5F8-4215-4958-91E5-F3761EA233C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4839E5F8-4215-4958-91E5-F3761EA233C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +55,5 @@ Global
 		{CA4F5444-3654-4621-86F7-081D29156B7E} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
 		{B16626BC-18CA-4277-8F00-6EAB12768735} = {52C487B3-B0E6-4E5D-B706-DC7E2265FE79}
 		{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2} = {4E104471-911A-4410-8B95-DDBB673C3EA3}
-		{4839E5F8-4215-4958-91E5-F3761EA233C4} = {52C487B3-B0E6-4E5D-B706-DC7E2265FE79}
 	EndGlobalSection
 EndGlobal
