@@ -5,9 +5,9 @@ using dym.Model;
 
 namespace dym.Logic
 {
-    public class Platform :EngineData.DataBase
+    public class PlatformModule : EngineData.DataBase
     {
-        public Platform()
+        public PlatformModule()
         {
         }
         public List<T> GetList<T>(string where=null)
