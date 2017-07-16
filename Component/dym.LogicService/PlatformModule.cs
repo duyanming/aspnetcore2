@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Dapper;
 using dym.Model;
 
-namespace dym.Logic
+namespace dym.LogicService
 {
     public class PlatformModule : EngineData.DataBase
     {
