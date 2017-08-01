@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 
 namespace dym.web
 {
@@ -23,9 +25,20 @@ namespace dym.web
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            var builder = new ContainerBuilder();
+
+            //注意以下写法
+            //builder.RegisterType<GuidTransientAppService>().As<IGuidTransientAppService>();
+            //builder.RegisterType<GuidScopedAppService>().As<IGuidScopedAppService>().InstancePerLifetimeScope();
+            //builder.RegisterType<GuidSingletonAppService>().As<IGuidSingletonAppService>().SingleInstance();
+
+            builder.Populate(services);
+            this.ApplicationContainer = builder.Build();
+
+            return new AutofacServiceProvider(this.ApplicationContainer);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,5 +60,8 @@ namespace dym.web
                 );
             });
         }
+
+        public IContainer ApplicationContainer { get; private set; }
+
     }
 }
