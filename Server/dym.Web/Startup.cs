@@ -9,9 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Autofac;
-using Autofac.Extensions.DependencyInjection;
 
-namespace dym.web
+namespace dym.Web
 {
     public class Startup
     {
@@ -25,20 +24,9 @@ namespace dym.web
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var builder = new ContainerBuilder();
-
-            //注意以下写法
-            //builder.RegisterType<GuidTransientAppService>().As<IGuidTransientAppService>();
-            //builder.RegisterType<GuidScopedAppService>().As<IGuidScopedAppService>().InstancePerLifetimeScope();
-            //builder.RegisterType<GuidSingletonAppService>().As<IGuidSingletonAppService>().SingleInstance();
-
-            builder.Populate(services);
-            this.ApplicationContainer = builder.Build();
-
-            return new AutofacServiceProvider(this.ApplicationContainer);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +49,16 @@ namespace dym.web
             });
         }
 
-        public IContainer ApplicationContainer { get; private set; }
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            // Add any Autofac modules or registrations.
+            // This is called AFTER ConfigureServices so things you
+            // register here OVERRIDE things registered in ConfigureServices.
+            //
+            // You must have the call to AddAutofac in the Program.Main
+            // method or this won't be called.
+            builder.RegisterModule(new AutofacModule());
+        }
 
     }
 }

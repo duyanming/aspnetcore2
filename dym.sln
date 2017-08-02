@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26711.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{52C487B3-B0E6-4E5D-B706-DC7E2265FE79}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.EngineData", "Common\dym.EngineData\dym.EngineData.csproj", "{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.LogicService", "Component\dym.LogicService\dym.LogicService.csproj", "{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.IRepository", "Component\dym.IRepository\dym.IRepository.csproj", "{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Repository", "Component\dym.Repository\dym.Repository.csproj", "{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +67,10 @@ Global
 		{B16626BC-18CA-4277-8F00-6EAB12768735} = {52C487B3-B0E6-4E5D-B706-DC7E2265FE79}
 		{1B778D00-85A1-4FCE-B037-B2CA4BF17CD2} = {4E104471-911A-4410-8B95-DDBB673C3EA3}
 		{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
+		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
+		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEC50E20-7C8D-4F32-88C9-C466198CF11E}
 	EndGlobalSection
 EndGlobal
