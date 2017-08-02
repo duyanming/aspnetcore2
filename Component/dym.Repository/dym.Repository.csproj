@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\dym.EngineData\dym.EngineData.csproj" />
     <ProjectReference Include="..\dym.IRepository\dym.IRepository.csproj" />
     <ProjectReference Include="..\dym.Model\dym.Model.csproj" />
   </ItemGroup>

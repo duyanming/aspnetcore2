@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Dapper;
 using dym.LogicService;
 using dym.IRepository;
 
@@ -20,7 +19,7 @@ namespace dym.Web.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var list = new PlatformModule().GetList<Model.sys_member>();
+            var list = baseRepository.GetList<Model.sys_member>();
             return View(list);
         }
     }
