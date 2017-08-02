@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "dym.web": {
+    "dym.Web": {
       "commandName": "Project"
     }
   }
