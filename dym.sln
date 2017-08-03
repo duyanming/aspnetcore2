@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.EngineData", "Common\dy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.LogicService", "Component\dym.LogicService\dym.LogicService.csproj", "{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.IRepository", "Component\dym.IRepository\dym.IRepository.csproj", "{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.IRepository", "Component\dym.IRepository\dym.IRepository.csproj", "{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Repository", "Component\dym.Repository\dym.Repository.csproj", "{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dym.Repository", "Component\dym.Repository\dym.Repository.csproj", "{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dym.Loader", "Common\dym.Loader\dym.Loader.csproj", "{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{2DAC7BC4-49DC-4A42-B56E-2FE58AF71068} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
 		{9CB3B63D-855B-4E4F-99BE-DE6E27380B4C} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
 		{B08EDFF1-094D-47D5-8C8E-B37B74FCF1DB} = {F53619E1-1E98-443D-9B45-11E49917BCAE}
+		{4D6E9ABC-9EBE-40F5-A22F-DEFEB34F6132} = {4E104471-911A-4410-8B95-DDBB673C3EA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DEC50E20-7C8D-4F32-88C9-C466198CF11E}

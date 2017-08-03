@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Autofac;
-using dym.Repository;
-using dym.IRepository;
 using System.Reflection;
 
-namespace dym.Web
+namespace dym.Loader
 {
     public class AutofacModule : Autofac.Module
     {
@@ -25,13 +21,15 @@ namespace dym.Web
             //    .As<IValuesService>()
             //    .InstancePerLifetimeScope();
             // builder.RegisterType<BaseRepository>().As<IBaseRepository>();
-
-            AssemblyName assemblyName = new AssemblyName("dym.Repository");
-            Assembly.Load(assemblyName).GetTypes().Where(x => x.GetTypeInfo().IsClass && !x.GetTypeInfo().IsAbstract && !x.GetTypeInfo().IsInterface).ToList().ForEach(
-                _t => {
-                    builder.RegisterType(_t).As(_t.GetInterfaces());
-                }
-            );
+            Const.AppSettings.IocDll.ForEach(d=> {
+                AssemblyName assemblyName = new AssemblyName(d);
+                Assembly.Load(assemblyName).GetTypes().Where(x => x.GetTypeInfo().IsClass && !x.GetTypeInfo().IsAbstract && !x.GetTypeInfo().IsInterface).ToList().ForEach(
+                    _t =>
+                    {
+                        builder.RegisterType(_t).As(_t.GetInterfaces());
+                    }
+                );
+            });
         }
     }
 }

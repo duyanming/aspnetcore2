@@ -32,7 +32,6 @@ namespace dym.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            new Const.InitConst(Configuration);
             //loggerFactory.AddConsole();
 
             if (env.IsDevelopment())
@@ -57,7 +56,8 @@ namespace dym.Web
             //
             // You must have the call to AddAutofac in the Program.Main
             // method or this won't be called.
-            builder.RegisterModule(new AutofacModule());
+            new Const.InitConst(Configuration);
+            builder.RegisterModule(new Loader.AutofacModule());
         }
 
     }
