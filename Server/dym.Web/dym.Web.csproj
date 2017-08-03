@@ -31,7 +31,6 @@
     <ProjectReference Include="..\..\Common\dym.EngineData\dym.EngineData.csproj" />
     <ProjectReference Include="..\..\Common\dym.Loader\dym.Loader.csproj" />
     <ProjectReference Include="..\..\Component\dym.IRepository\dym.IRepository.csproj" />
-    <ProjectReference Include="..\..\Component\dym.LogicService\dym.LogicService.csproj" />
     <ProjectReference Include="..\..\Component\dym.Model\dym.Model.csproj" />
     <ProjectReference Include="..\..\Component\dym.Repository\dym.Repository.csproj" />
   </ItemGroup>
