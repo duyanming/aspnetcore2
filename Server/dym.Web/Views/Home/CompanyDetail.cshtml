@@ -1,0 +1,34 @@
+﻿@using dym.Model;
+@{
+    ViewData["Title"] = Model.name;
+}
+<script src="~/js/jquery-3.1.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container">
+    <h2 style="text-align:center;">@Model.name</h2>
+    <p> .net core @Model.name</p>
+    <table class="table  table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>邮箱</th>
+                <th>地址</th>
+                <th>注册日期</th>
+                <th>返回</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>@Model.code</td>
+                    <td>@Model.name</td>                   
+                    <td>@Model.email</td>
+                    <td>@Model.address</td>
+                    <td>@Model.rdt</td>
+                    <td><a href="/">返回</a></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
