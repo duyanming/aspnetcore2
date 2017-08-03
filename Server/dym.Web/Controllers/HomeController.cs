@@ -21,5 +21,10 @@ namespace dym.Web.Controllers
             var list = baseRepository.GetList<Model.sys_member>();
             return View(list);
         }
+        public IActionResult CompanyDetail(string id)
+        {
+            var list = baseRepository.GetList<Model.bif_company>($"where id={id}").First();
+            return View(list);
+        }
     }
 }
