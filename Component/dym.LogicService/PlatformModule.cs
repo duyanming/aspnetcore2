@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Dapper;
 using dym.Model;
+using System.Linq.Expressions;
 
 namespace dym.LogicService
 {
@@ -10,17 +10,24 @@ namespace dym.LogicService
         public PlatformModule()
         {
         }
-        public List<T> GetList<T>(string where=null)
-        { 
-            return db.Query<T>($"select * from {typeof(T).Name} {where}").AsList<T>();
-        }
-        public Boolean Delete<T>(string Where)
+        public List<T> Queryable<T>(Expression<Func<T, bool>> expression) where T : class, new()
         {
-            if (string.IsNullOrWhiteSpace(Where))
-            {
-                throw new ArgumentNullException("必须指定 Where 条件！");
-            }
-            return db.Execute($"delete from  {typeof(T).Name} {Where}")>0;
+            return db.Queryable<T>().Where(expression).ToList();
+        }
+        public List<T> Queryable<T>() where T : class, new()
+        {
+            return db.Queryable<T>().ToList();
+        }
+        public int Deleteable<T>(Expression<Func<T, bool>> expression) where T : class, new()
+        {
+            return db.Deleteable<T>().Where(expression).ExecuteCommand();
+        }
+        public int Insertable<T>(T obj) where T : class, new() {
+            return db.Insertable(obj).ExecuteCommand();
+        }
+        public int Updateable<T>(T obj) where T : class, new()
+        {
+            return db.Updateable(obj).ExecuteCommand();
         }
     }
 }

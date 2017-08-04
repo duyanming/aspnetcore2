@@ -18,12 +18,12 @@ namespace dym.Web.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var list = baseRepository.GetList<Model.sys_member>();
+            var list = baseRepository.db.Queryable<Model.sys_member>().ToList();
             return View(list);
         }
-        public IActionResult CompanyDetail(string id)
+        public IActionResult CompanyDetail(long id)
         {
-            var list = baseRepository.GetList<Model.bif_company>($"where id={id}").First();
+            var list = baseRepository.db.Queryable<Model.bif_company>().Where(c=>c.id==id).First();
             return View(list);
         }
     }

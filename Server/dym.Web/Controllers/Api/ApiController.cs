@@ -22,7 +22,7 @@ namespace dym.Web.Controllers
         public IEnumerable<Model.sys_member> Get()
         {
             //return new string[] { "value1", "value2" };
-            return baseRepository.GetList<Model.sys_member>();
+            return baseRepository.db.Queryable<Model.sys_member>().ToList();
         }
 
         // GET api/values/5

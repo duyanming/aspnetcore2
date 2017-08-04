@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using SqlSugar;
 
 namespace dym.IRepository
 {
     public interface IBaseRepository
     {
-        List<T> GetList<T>(string where = null);
-        Boolean Delete<T>(string Where);
+        SqlSugarClient db { get;}
     }
 }
