@@ -27,11 +27,7 @@
     <PackageReference Include="MySql.Data" Version="7.0.7-m61" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\dym.Const\dym.Const.csproj" />
-    <ProjectReference Include="..\..\Common\dym.EngineData\dym.EngineData.csproj" />
     <ProjectReference Include="..\..\Common\dym.Loader\dym.Loader.csproj" />
-    <ProjectReference Include="..\..\Component\dym.IRepository\dym.IRepository.csproj" />
-    <ProjectReference Include="..\..\Component\dym.Model\dym.Model.csproj" />
     <ProjectReference Include="..\..\Component\dym.Repository\dym.Repository.csproj" />
   </ItemGroup>
 
