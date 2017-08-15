@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="7.0.7-m61" />
-    <PackageReference Include="sqlSugarCore" Version="4.2.2.4" />
+    <PackageReference Include="sqlSugarCore" Version="4.3.2.6" />
   </ItemGroup>
 
   <ItemGroup>
