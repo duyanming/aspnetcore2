@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore;
 
 namespace dym.Web
 {
@@ -12,16 +13,13 @@ namespace dym.Web
     {
         public static void Main(string[] args)
         {
-            var host = new WebHostBuilder()
-                .UseKestrel()
+            BuildWebHost(args).Run();
+        }
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
                 .ConfigureServices(services => services.AddAutofac())
                 .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseApplicationInsights()
                 .Build();
-
-            host.Run();
-        }
     }
 }

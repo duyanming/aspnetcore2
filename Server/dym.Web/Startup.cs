@@ -30,13 +30,18 @@ namespace dym.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             //loggerFactory.AddConsole();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
             }
             app.UseStaticFiles();//使用静态文件默认的文件夹为wwwroot
             app.UseMvc(routes =>
