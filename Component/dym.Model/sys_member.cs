@@ -15,7 +15,7 @@ namespace dym.Model
     /// <summary>
     /// 实体类sys_member。(属性说明自动提取数据库字段的描述信息)
     /// </summary>
-    public class sys_member
+    public partial class sys_member
     {
         /// <summary>
         /// auto_increment

@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\dym.Loader\dym.Loader.csproj" />
     <ProjectReference Include="..\..\Component\dym.Repository\dym.Repository.csproj" />
+    <ProjectReference Include="..\..\Component\dym.ViewModel\dym.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

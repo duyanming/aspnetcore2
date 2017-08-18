@@ -12,18 +12,20 @@ namespace dym.Web.Controllers
     public class HomeController : Controller
     {
         private readonly IBaseRepository baseRepository;
-        public HomeController(IBaseRepository baseRepository) {
+        public HomeController(IBaseRepository baseRepository)
+        {
             this.baseRepository = baseRepository;
         }
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var list = baseRepository.db.Queryable<Model.sys_member>().ToList();
+            var list = baseRepository.db.Queryable<Model.sys_member, Model.bif_company>((m, c) => new object[] { SqlSugar.JoinType.Left, m.coid == c.id }).OrderBy((m)=>m.rdt,SqlSugar.OrderByType.Desc)
+                .Select((m, c) => new ViewModel.IndexViewModel{ account=m.account, name=m.name, position=m.position, rdt=m.rdt, coid=m.coid,corpName=c.name}).ToList();
             return View(list);
         }
         public IActionResult CompanyDetail(long id)
         {
-            var list = baseRepository.db.Queryable<Model.bif_company>().Where(c=>c.id==id).First();
+            var list = baseRepository.db.Queryable<Model.bif_company>().Where(c => c.id == id).First();
             return View(list);
         }
     }

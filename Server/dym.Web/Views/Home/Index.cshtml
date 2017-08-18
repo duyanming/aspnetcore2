@@ -1,4 +1,5 @@
-﻿@using dym.Model;
+﻿@using dym.ViewModel;
+@*@inherits Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<dym.ViewModel.IndexViewModel>>;*@
 @{
     ViewData["Title"] = "会员列表";
 }
@@ -20,13 +21,14 @@
             </tr>
         </thead>
         <tbody>
-           @foreach(sys_member m in Model){
+           @foreach (IndexViewModel m in Model)
+           {
             <tr>
                 <td>@m.account</td>
                 <td>@m.name</td>
                 <td>@m.position</td>
                 <td>@m.rdt</td>
-                <td><a href="Home/CompanyDetail/@m.coid">公司</a></td>
+                <td><a href="~/Home/CompanyDetail/@m.coid">@m.corpName</a></td>
             </tr>
            }
         </tbody>
