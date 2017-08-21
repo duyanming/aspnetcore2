@@ -21,8 +21,8 @@ namespace dym.Web.Controllers
         public IActionResult Index()
         {
             var list = baseRepository.db.Queryable<Model.sys_member, Model.bif_company>((m, c) => new object[] { SqlSugar.JoinType.Left, m.coid == c.id }).OrderBy((m) => m.rdt, SqlSugar.OrderByType.Desc)
-                .Select((m, c) => new { account = m.account, name = m.name, position = m.position, rdt = m.rdt, coid = m.coid, corpName = c.name }).ToList();
-            return View(list.ToTs<Model.sys_member>());
+                .Select((m, c) => new ViewModel.IndexViewModel{ account = m.account, name = m.name, position = m.position, rdt = m.rdt, coid = m.coid, corpName = c.name }).ToList();
+            return View(list);
         }
         public IActionResult CompanyDetail(long id)
         {
