@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using dym.IRepository;
+using dym.Web.Extensions;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,9 +20,9 @@ namespace dym.Web.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var list = baseRepository.db.Queryable<Model.sys_member, Model.bif_company>((m, c) => new object[] { SqlSugar.JoinType.Left, m.coid == c.id }).OrderBy((m)=>m.rdt,SqlSugar.OrderByType.Desc)
-                .Select((m, c) => new ViewModel.IndexViewModel{ account=m.account, name=m.name, position=m.position, rdt=m.rdt, coid=m.coid,corpName=c.name}).ToList();
-            return View(list);
+            var list = baseRepository.db.Queryable<Model.sys_member, Model.bif_company>((m, c) => new object[] { SqlSugar.JoinType.Left, m.coid == c.id }).OrderBy((m) => m.rdt, SqlSugar.OrderByType.Desc)
+                .Select((m, c) => new { account = m.account, name = m.name, position = m.position, rdt = m.rdt, coid = m.coid, corpName = c.name }).ToList();
+            return View(list.ToTs<Model.sys_member>());
         }
         public IActionResult CompanyDetail(long id)
         {
